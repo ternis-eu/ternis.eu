@@ -92,8 +92,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize theme
     new ThemeManager();
     
-    // Initialize Lucide icons
-    if (typeof lucide !== 'undefined') {
+    // Initialize Lucide icons with a small delay to ensure library is loaded
+    setTimeout(() => {
+        if (typeof lucide !== 'undefined' && lucide.createIcons) {
+            lucide.createIcons();
+        } else {
+            console.error('Lucide library not loaded');
+        }
+    }, 100);
+});
+
+// Also try to initialize icons when window loads (fallback)
+window.addEventListener('load', () => {
+    if (typeof lucide !== 'undefined' && lucide.createIcons) {
         lucide.createIcons();
     }
 });
