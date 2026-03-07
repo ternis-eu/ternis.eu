@@ -38,35 +38,38 @@
         
         h1 {
             font-size: clamp(2rem, 6vw, 3.5rem);
-            font-weight: 300;
-            letter-spacing: 0.02em;
-            margin-bottom: 0.5rem;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.625rem;
             animation: fadeInUp 0.8s ease-out 0.1s backwards;
         }
         
         .subtitle {
             font-family: var(--font-mono);
-            font-size: 0.875rem;
+            font-size: 0.8125rem;
             color: var(--color-text-secondary);
             text-transform: uppercase;
-            letter-spacing: 0.15em;
-            font-weight: 300;
+            letter-spacing: 0.12em;
+            font-weight: 400;
             animation: fadeInUp 0.8s ease-out 0.2s backwards;
         }
         
         .content-section {
             background: var(--color-surface);
             border: 1px solid var(--color-border);
-            padding: 2.5rem;
+            padding: 2.75rem;
             animation: fadeInUp 0.8s ease-out 0.3s backwards;
             transition: background-color 0.3s ease, border-color 0.3s ease;
+            border-radius: 2px;
         }
         
         .content-section h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            margin-top: 2rem;
+            font-size: 1.375rem;
+            font-weight: 500;
+            margin-bottom: 1.25rem;
+            margin-top: 2.5rem;
+            letter-spacing: -0.01em;
+            color: var(--color-text-primary);
         }
         
         .content-section h2:first-child {
@@ -74,21 +77,23 @@
         }
         
         .content-section p {
-            margin-bottom: 1rem;
+            margin-bottom: 0.875rem;
             color: var(--color-text-primary);
+            line-height: 1.7;
         }
         
         .content-section strong {
-            font-weight: 600;
+            font-weight: 500;
             color: var(--color-text-primary);
         }
         
         .info-block {
             background: var(--color-bg);
-            border-left: 3px solid var(--color-accent);
-            padding: 1.25rem;
+            border-left: 2px solid var(--color-accent);
+            padding: 1.5rem;
             margin: 1.5rem 0;
             transition: background-color 0.3s ease;
+            border-radius: 0 2px 2px 0;
         }
         
         .info-block p {
@@ -161,16 +166,9 @@
             
             <h2>Kontakt</h2>
             <div class="info-block">
-                <p><strong>E-Mail:</strong> <a href="mailto:f.ternis@xpsystems.eu">f.ternis@xpsystems.eu</a></p>
+                <p><strong>E-Mail:</strong> f.ternis[at]xpsystems.eu</p>
                 <p><strong>Telefon:</strong> (nicht öffentlich)</p>
             </div>
         </div>
     </div>
     
-    <footer>
-        <p class="footer-text">© 2026 ternis.eu</p>
-    </footer>
-    
-    <script src="script.js"></script>
-</body>
-</html>
