@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum – ternis.eu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--font-mono);
+            font-size: 0.875rem;
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            transition: color 0.2s ease;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .back-link:hover {
+            color: var(--color-text-primary);
+        }
+        
+        .back-link i {
+            width: 16px;
+            height: 16px;
+        }
+        
+        header {
+            padding-top: 4rem;
+        }
+        
+        h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 300;
+            letter-spacing: 0.02em;
+            margin-bottom: 0.5rem;
+            animation: fadeInUp 0.8s ease-out 0.1s backwards;
+        }
+        
+        .subtitle {
+            font-family: var(--font-mono);
+            font-size: 0.875rem;
+            color: var(--color-text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 300;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+        
+        .content-section {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            padding: 2.5rem;
+            animation: fadeInUp 0.8s ease-out 0.3s backwards;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .content-section h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .content-section h2:first-child {
+            margin-top: 0;
+        }
+        
+        .content-section p {
+            margin-bottom: 1rem;
+            color: var(--color-text-primary);
+        }
+        
+        .content-section strong {
+            font-weight: 600;
+            color: var(--color-text-primary);
+        }
+        
+        .info-block {
+            background: var(--color-bg);
+            border-left: 3px solid var(--color-accent);
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            transition: background-color 0.3s ease;
+        }
+        
+        .info-block p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .info-block p:last-child {
+            margin-bottom: 0;
+        }
+        
+        a {
+            color: var(--color-accent);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        a:hover {
+            color: var(--color-text-primary);
+        }
+        
+        .footer-text {
+            font-family: var(--font-mono);
+            font-size: 0.875rem;
+            color: var(--color-text-secondary);
+        }
+        
+        @media (max-width: 640px) {
+            .content-section {
+                padding: 1.75rem;
+            }
+            
+            header {
+                padding-top: 3.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button id="theme-light" aria-label="Light Mode">
+            <i data-lucide="sun"></i>
+        </button>
+        <button id="theme-dark" aria-label="Dark Mode">
+            <i data-lucide="moon"></i>
+        </button>
+        <button id="theme-system" aria-label="System Theme">
+            <i data-lucide="monitor"></i>
+        </button>
+    </div>
+
+    <div class="container">
+        <header>
+            <a href="index.html" class="back-link">
+                <i data-lucide="arrow-left"></i>
+                Zurück zur Startseite
+            </a>
+            <h1>Impressum</h1>
+            <p class="subtitle">Angaben gemäß § 5 DDG</p>
+        </header>
+        
+        <div class="content-section">
+            <h2>Verantwortlicher (Betreiber)</h2>
+            <div class="info-block">
+                <p><strong>Fabian Elias Ternis</strong></p>
+                <p>Alzeyer Str. 97<br>
+                67592 Flörsheim-Dalsheim<br>
+                Deutschland</p>
+            </div>
+            
+            <h2>Kontakt</h2>
+            <div class="info-block">
+                <p><strong>E-Mail:</strong> <a href="mailto:f.ternis@xpsystems.eu">f.ternis@xpsystems.eu</a></p>
+                <p><strong>Telefon:</strong> (nicht öffentlich)</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p class="footer-text">© 2026 ternis.eu</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
