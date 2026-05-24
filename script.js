@@ -246,3 +246,27 @@ window.addEventListener('load', () => {
         lucide.createIcons();
     }
 });
+
+// Handle card clicks to make the whole card clickable if it has a primary link
+document.querySelectorAll('.person-card').forEach(card => {
+    // If the click is not on a link or button, try to navigate to the primary link
+    card.addEventListener('click', (e) => {
+        // Find closest anchor tag
+        if (e.target.closest('a') || e.target.closest('button')) {
+            return; // let it behave normally
+        }
+
+        // Find the first link-item or fallback to any a tag in person-links
+        const primaryLink = card.querySelector('.person-links a:not([href^="mailto:"])');
+
+        if (primaryLink && primaryLink.href) {
+            window.open(primaryLink.href, '_blank', 'noopener');
+        }
+    });
+
+    // Add cursor pointer if there's a primary link
+    const primaryLink = card.querySelector('.person-links a:not([href^="mailto:"])');
+    if (primaryLink) {
+        card.style.cursor = 'pointer';
+    }
+});
