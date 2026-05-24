@@ -1,185 +1,179 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ternis.eu – Familie Ternis</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
     <!-- Theme Toggle -->
     <div class="theme-toggle">
-        <button id="theme-light" aria-label="Light Mode">
+        <button id="theme-light" aria-label="Light Mode" class="theme-btn">
             <i data-lucide="sun"></i>
         </button>
-        <button id="theme-dark" aria-label="Dark Mode">
+        <button id="theme-dark" aria-label="Dark Mode" class="theme-btn">
             <i data-lucide="moon"></i>
         </button>
-        <button id="theme-system" aria-label="System Theme">
+        <button id="theme-system" aria-label="System Theme" class="theme-btn">
             <i data-lucide="monitor"></i>
         </button>
     </div>
 
-    <div class="container">
-        <header>
-            <h1 class="site-title">ternis.eu</h1>
-            <p class="site-subtitle">Familie Ternis</p>
-        </header>
-        
-        <div class="intro-section">
-            <div class="icon-wrapper">
-                <i data-lucide="mail" style="width: 20px; height: 20px; color: var(--color-accent);"></i>
+    <main class="container">
+        <header class="hero">
+            <div class="hero-content">
+                <h1 class="site-title">Ternis</h1>
+                <p class="site-subtitle">Familie Ternis Portal</p>
+                <p class="hero-description">Welcome to the digital home of the Ternis family. Explore our individual projects, portfolios, and contact information.</p>
             </div>
-            <h2>E-Mail Service</h2>
-            <p>Mailserver für alle @ternis.eu Adressen</p>
-        </div>
-        
-        <div class="divider"></div>
-        
-        <section class="people-section">
-            <h3 class="section-title">Mitglieder</h3>
-            
-            <article class="person-card">
-                <h3 class="person-name">Ivo Ternis</h3>
+        </header>
+
+        <section class="email-service-section glass-panel">
+            <div class="section-header">
+                <div class="icon-wrapper">
+                    <i data-lucide="mail"></i>
+                </div>
+                <h2>E-Mail Service</h2>
+            </div>
+            <p>Our email infrastructure has moved to a new domain.</p>
+            <div class="email-formats">
+                <div class="email-format-badge">
+                    <i data-lucide="at-sign"></i>
+                    <span>{first_name}@ternismail.de</span>
+                </div>
+                <div class="email-format-badge">
+                    <i data-lucide="inbox"></i>
+                    <span>catch-all@{first_name}.ternismail.de</span>
+                </div>
+            </div>
+            <p class="domain-info">Please use the new <a href="https://ternismail.de" target="_blank" rel="noopener">ternismail.de</a> domain for all future correspondence.</p>
+        </section>
+
+        <section class="people-grid">
+            <h3 class="sr-only">Family Members</h3>
+
+            <!-- Ivo -->
+            <article class="person-card glass-panel">
+                <div class="card-header">
+                    <div class="avatar">IT</div>
+                    <h3 class="person-name">Ivo Ternis</h3>
+                </div>
                 <div class="person-links">
-                    <a href="https://ivo.ternis.eu" class="person-link" target="_blank" rel="noopener">
-                        <i data-lucide="user"></i>
-                        ivo.ternis.eu
-                    </a>
-                    <span class="person-link">
-                        <i data-lucide="mail"></i>
-                        ivo[at]ternis.eu
-                    </span>
-                    <a href="https://ivoternis.de" class="person-link" target="_blank" rel="noopener">
-                        <i data-lucide="external-link"></i>
-                        ivoternis.de
-                    </a>
+                    <a href="mailto:ivo@ternismail.de" class="link-item"><i data-lucide="mail"></i>ivo@ternismail.de</a>
+                    <a href="https://ivo.ternis.eu" class="link-item" target="_blank" rel="noopener"><i data-lucide="globe"></i>ivo.ternis.eu</a>
+                    <a href="https://ivoternis.de" class="link-item" target="_blank" rel="noopener"><i data-lucide="external-link"></i>ivoternis.de</a>
                 </div>
                 <div class="social-links">
-                    <a href="https://github.com/ivoternis" class="social-icon" target="_blank" rel="noopener" data-tooltip="GitHub">
-                        <i data-lucide="github"></i>
-                    </a>
-                    <a href="https://instagram.com/ivoternis" class="social-icon" target="_blank" rel="noopener" data-tooltip="Instagram">
-                        <i data-lucide="instagram"></i>
-                    </a>
-                    <a href="https://x.com/ivoternis" class="social-icon" target="_blank" rel="noopener" data-tooltip="X">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>
-                    </a>
+                    <a href="https://github.com/ivoternis" target="_blank" rel="noopener" title="GitHub"><i data-lucide="github"></i></a>
+                    <a href="https://instagram.com/ivoternis" target="_blank" rel="noopener" title="Instagram"><i data-lucide="instagram"></i></a>
+                    <a href="https://x.com/ivoternis" target="_blank" rel="noopener" title="X"><i data-lucide="twitter"></i></a>
                 </div>
             </article>
-            
-            <article class="person-card">
-                <h3 class="person-name">Fabian Ternis</h3>
+
+            <!-- Fabian -->
+            <article class="person-card glass-panel">
+                <div class="card-header">
+                    <div class="avatar">FT</div>
+                    <h3 class="person-name">Fabian Ternis</h3>
+                </div>
                 <div class="person-links">
-                    <a href="https://fabian.ternis.eu" class="person-link" target="_blank" rel="noopener">
-                        <i data-lucide="user"></i>
-                        fabian.ternis.eu
-                    </a>
-                    <span class="person-link">
-                        <i data-lucide="mail"></i>
-                        fabian[at]ternis.eu
-                    </span>
-                    <a href="https://fabianternis.de" class="person-link" target="_blank" rel="noopener">
-                        <i data-lucide="external-link"></i>
-                        fabianternis.de
-                    </a>
-                    <a href="https://fabianternis.dev" class="person-link" target="_blank" rel="noopener">
-                        <i data-lucide="code"></i>
-                        fabianternis.dev
-                    </a>
+                    <a href="mailto:fabian@ternismail.de" class="link-item"><i data-lucide="mail"></i>fabian@ternismail.de</a>
+                    <a href="https://fabian.ternis.eu" class="link-item" target="_blank" rel="noopener"><i data-lucide="globe"></i>fabian.ternis.eu</a>
+                    <a href="https://fabianternis.de" class="link-item" target="_blank" rel="noopener"><i data-lucide="external-link"></i>fabianternis.de</a>
+                    <a href="https://fabianternis.dev" class="link-item" target="_blank" rel="noopener"><i data-lucide="code"></i>fabianternis.dev</a>
                 </div>
                 <div class="social-links">
-                    <a href="https://github.com/michaelninder" class="social-icon" target="_blank" rel="noopener" data-tooltip="GitHub">
-                        <i data-lucide="github"></i>
-                    </a>
-                    <a href="https://instagram.com/ternisfabian" class="social-icon" target="_blank" rel="noopener" data-tooltip="Instagram">
-                        <i data-lucide="instagram"></i>
-                    </a>
-                    <a href="https://getmy.name/get/michaelninder" class="social-icon" target="_blank" rel="noopener" data-tooltip="GetMyName">
-                        <i data-lucide="user-circle"></i>
-                    </a>
+                    <a href="https://github.com/michaelninder" target="_blank" rel="noopener" title="GitHub"><i data-lucide="github"></i></a>
+                    <a href="https://instagram.com/ternisfabian" target="_blank" rel="noopener" title="Instagram"><i data-lucide="instagram"></i></a>
+                    <a href="https://getmy.name/get/michaelninder" target="_blank" rel="noopener" title="GetMyName"><i data-lucide="user-circle"></i></a>
                 </div>
             </article>
-            
-            <article class="person-card">
-                <h3 class="person-name">Brigitte & Wolfgang Ternis</h3>
+
+            <!-- Brigitte & Wolfgang -->
+            <article class="person-card glass-panel">
+                <div class="card-header">
+                    <div class="avatar">BWT</div>
+                    <h3 class="person-name">Brigitte & Wolfgang</h3>
+                </div>
                 <div class="person-links">
-                    <a href="https://wonnegauer-designwerkstatt.de" class="person-link" target="_blank" rel="noopener">
-                        <i data-lucide="palette"></i>
-                        wonnegauer-designwerkstatt.de
-                    </a>
-                    <span class="person-link">
-                        <i data-lucide="mail"></i>
-                        bw[at]ternis.eu
-                    </span>
+                    <a href="mailto:bw@ternismail.de" class="link-item"><i data-lucide="mail"></i>bw@ternismail.de</a>
+                    <a href="https://wonnegauer-designwerkstatt.de" class="link-item" target="_blank" rel="noopener"><i data-lucide="palette"></i>wonnegauer-designwerkstatt.de</a>
                 </div>
             </article>
-            
-            <article class="person-card">
-                <h3 class="person-name">Myriam Ternis</h3>
+
+            <!-- Myriam -->
+            <article class="person-card glass-panel">
+                <div class="card-header">
+                    <div class="avatar">MT</div>
+                    <h3 class="person-name">Myriam Ternis</h3>
+                </div>
                 <div class="person-links">
-                    <a href="https://tanzatelier-ternis.de" class="person-link" target="_blank" rel="noopener">
-                        <i data-lucide="music"></i>
-                        tanzatelier-ternis.de
-                    </a>
+                    <a href="mailto:myriam@ternismail.de" class="link-item"><i data-lucide="mail"></i>myriam@ternismail.de</a>
+                    <a href="https://tanzatelier-ternis.de" class="link-item" target="_blank" rel="noopener"><i data-lucide="music"></i>tanzatelier-ternis.de</a>
                 </div>
             </article>
-            
-            <article class="person-card">
-                <h3 class="person-name">Ellenie Ternis</h3>
+
+            <!-- Ellenie -->
+            <article class="person-card glass-panel">
+                <div class="card-header">
+                    <div class="avatar">ET</div>
+                    <h3 class="person-name">Ellenie Ternis</h3>
+                </div>
                 <div class="person-links">
-                    <a href="https://ellenie.ternis.eu" class="person-link" target="_blank" rel="noopener">
-                        <i data-lucide="user"></i>
-                        ellenie.ternis.eu
-                    </a>
-                    <span class="person-link">
-                        <i data-lucide="mail"></i>
-                        ellenie[at]ternis.eu
-                    </span>
+                    <a href="mailto:ellenie@ternismail.de" class="link-item"><i data-lucide="mail"></i>ellenie@ternismail.de</a>
+                    <a href="https://ellenie.ternis.eu" class="link-item" target="_blank" rel="noopener"><i data-lucide="globe"></i>ellenie.ternis.eu</a>
                 </div>
                 <div class="social-links">
-                    <a href="https://github.com/ellenieternis" class="social-icon" target="_blank" rel="noopener" data-tooltip="GitHub">
-                        <i data-lucide="github"></i>
-                    </a>
-                    <a href="https://instagram.com/ellenieternis" class="social-icon" target="_blank" rel="noopener" data-tooltip="Instagram">
-                        <i data-lucide="instagram"></i>
-                    </a>
+                    <a href="https://github.com/ellenieternis" target="_blank" rel="noopener" title="GitHub"><i data-lucide="github"></i></a>
+                    <a href="https://instagram.com/ellenieternis" target="_blank" rel="noopener" title="Instagram"><i data-lucide="instagram"></i></a>
                 </div>
             </article>
-            
-            <article class="person-card">
-                <h3 class="person-name">Ilario Ternis</h3>
+
+            <!-- Ilario -->
+            <article class="person-card glass-panel">
+                <div class="card-header">
+                    <div class="avatar">IT</div>
+                    <h3 class="person-name">Ilario Ternis</h3>
+                </div>
                 <div class="person-links">
-                    <span class="person-link">
-                        <i data-lucide="mail"></i>
-                        ilario[at]ternis.eu
-                    </span>
+                    <a href="mailto:ilario@ternismail.de" class="link-item"><i data-lucide="mail"></i>ilario@ternismail.de</a>
                 </div>
                 <div class="social-links">
-                    <a href="https://github.com/ilarioternis" class="social-icon" target="_blank" rel="noopener" data-tooltip="GitHub">
-                        <i data-lucide="github"></i>
-                    </a>
+                    <a href="https://github.com/ilarioternis" target="_blank" rel="noopener" title="GitHub"><i data-lucide="github"></i></a>
                 </div>
             </article>
         </section>
-    </div>
+    </main>
     
-    <footer>
-        <a href="https://github.com/ternis-eu/ternis.eu" class="footer-link" target="_blank" rel="noopener">
-            <i data-lucide="github"></i>
-            GitHub Source
-        </a>
-        <span style="margin: 0 1rem; color: var(--color-border);">|</span>
-        <a href="impressum.html" class="footer-link">
-            <i data-lucide="file-text"></i>
-            Impressum
-        </a>
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-links">
+                <a href="https://github.com/ternis-eu/ternis.eu" target="_blank" rel="noopener" class="footer-link"><i data-lucide="github"></i> GitHub Source</a>
+                <span class="separator">•</span>
+                <a href="impressum.html" class="footer-link"><i data-lucide="file-text"></i> Impressum</a>
+            </div>
+
+            <div class="maintenance-info">
+                <p>Domain wird von <a href="https://dnbx.de" target="_blank" rel="noopener">dnbx.de</a> verwaltet, Webdesign und webentwicklung von <a href="https://ternis-edv.de" target="_blank" rel="noopener">ternis-edv.de</a> und <a href="https://xpsystems.eu" target="_blank" rel="noopener">xpsystems.eu/.de</a>.</p>
+                <p class="highlight-text"><a href="https://ternis-edv.de" target="_blank" rel="noopener">ternis-edv.de</a> is maintaining ternis.eu and <a href="https://ternismail.de" target="_blank" rel="noopener">ternismail.de</a> together with <a href="https://xpsystems.eu" target="_blank" rel="noopener">xpsystems.eu/.de</a>.</p>
+            </div>
+        </div>
     </footer>
     
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
